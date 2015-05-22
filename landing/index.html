@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="名师课堂,网校,课外辅导,网络教育,远程教育" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>下载家长会</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+        html{ font-size:100%; }
+        .content {
+            position: absolute;
+            z-index: 1;
+            width: 100%; height: 100%;
+        }
+        .content .tips { margin-top: 1em; }
+        .content .button a {
+            display:block;
+            width:90%;
+            height:2em;
+            font-family:"黑体";
+            margin:1em auto 0;
+            text-align: center;
+            color:#fff;
+            font-size:1.5em;
+            border-radius: 10px;
+            line-height:2em;
+            text-decoration: none;
+        }
+        .content .button a.download{ background:#ff6138; }
+        .content .button a.go_con{ background:#499dd5; }
+    </style>
+	<script src="http://res01.xesimg.com/jquery/jquery.min.js"></script>
+
+	<script type="text/javascript">var FD_NAME='xesapp';</script>
+    <script src="http://analysis.xueersi.com/stats/xes_stat.js?1406109655"></script>
+	
+</head>
+<body>
+
+    <div class="content">
+        <div class="font"><img src="img/landing_font.png" class="img-responsive" alt=""></div>
+        <div class="button">
+            <a id="down_link" xes_id="appdown" href="javascript:coid(0);" class="download">立即下载加入</a>
+            <a href="http://www.xueersi.com" class="go_con">继续访问学而思网校</a>
+        </div>
+        <div class="tips"><img src="img/landing_tips.png" class="img-responsive" alt=""></div>
+
+    </div>
+    <div class="bg"><img src="img/bg.jpg" alt="" class="img-responsive"></div>
+
+	<script>
+        function is_weixn(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+jQuery.cookie = function(name, value, options) {
+    if (typeof value != 'undefined') { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = '';
+            options.expires = -1;
+        }
+        var expires = '';
+        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == 'number') {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = '; expires=' + date.toUTCString();
+        }
+        var path = options.path ? '; path=' + (options.path) : '';
+        var domain = options.domain ? '; domain=' + (options.domain) : '';
+        var secure = options.secure ? '; secure' : '';
+        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+    } else {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+};
+        $(function(){
+            $('.button a').on('click', function(){
+                $.cookie('xesapp_isread',null);
+                $.cookie('xesapp_isread', 'ok',{
+                    domain : 'xueersi.com'
+                });
+            });
+
+            $('#down_link').on('click', function(){
+            
+                if (/android|Linux/i.test(navigator.userAgent)){
+                    if(is_weixn()){
+                        $('body').append('<p class="speech">我很努力，但微信不让下载。<br />请点击<span class="text-danger">右上角</span>，选择“<span class="text-danger">在浏览器中打开</span>”就能下载了。</p>');
+                    }else{
+                    window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+                }
+                }else if (/ipad|iphone|mac/i.test(navigator.userAgent)){
+                    // alert(2);
+                    // alert('IOS版，即将推出，敬请期待！');
+                    window.location.href = 'https://itunes.apple.com/us/app/jia-zhang-hui-xue-er-si-wang/id896405406?l=zh&ls=1&mt=8';
+                    // return false;
+                }else{
+                    window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>

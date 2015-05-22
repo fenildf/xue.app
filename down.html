@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <title>学而思网校app下载</title>
+    <script type="text/javascript" src="http://res01.xesimg.com/zepto/zepto.1.1.6.min.js?1427365490"></script>
+    <link rel="stylesheet" type="text/css" href="landing/app_down_mobile.css">
+  </head>
+
+  <body>
+    <div class="main" style="height:500px">
+      <div class="wrap">
+        <div class="title"></div>
+        <div class="q-1"></div>
+        <div class="q-2"></div>
+        <div class="q-3"></div>
+        <div class="q-4"></div>
+        <div class="child-body"></div>
+      </div>
+
+      <div class="wrap wrap-2">
+        <a class="down-btn" href="javascript:void(0);"><span></span>下载手机版</a>
+      </div>
+
+      <img class="cloud" src="landing/img/cloud.png">
+     
+     </div> 
+
+     <script type="text/javascript">
+     (function(z) {
+       var ua = navigator.userAgent.toLowerCase();
+       var h = document.body.clientHeight||window.screen.height;
+       var main = z('.main');
+       var wrap = z('.wrap');
+       var isWX = !!/micromessenger/ig.test(ua);
+       var isAni = true;
+       var btn = z('a.down-btn');
+       var tpl = '<p class="speech $animation$"><span class="right-top"></span>我很努力，但微信不让下载。<br />请点击<span class="danger">右上角</span>，选择“<span class="danger">在$there$中打开</span>”就能下载了。</p>';
+       
+       var isMac = function(){
+          if(/ipad|iphone|mac/i.test(ua)){
+             window.location.href = 'https://itunes.apple.com/us/app/jia-zhang-hui-xue-er-si-wang/id896405406?l=zh&ls=1&mt=8'
+          }
+       }()
+
+       resizeFn();
+       var isMSX = function(){
+          /m(353|351|355|356)(.*?)(mobile)/ig.test(ua) ? isAni = false :isAni = true;
+       }()
+       
+       isAni ? (wrap.addClass('active'),tpl = tpl.replace(/\$animation\$/i,'moving')):
+        (wrap.addClass('normal'),tpl = tpl.replace(/\$animation\$/i,''))
+
+       var downLoad = function() {
+         if (/android|Linux/i.test(ua)) {
+           !isWX ? window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink' :
+             (z('.speech').length == 0 ? (tpl = tpl.replace(/\$there\$/i, '浏览器'), main.append(tpl)) : tpl = tpl);
+         } else if (/ipad|iphone|mac/i.test(ua)) {
+           !isWX ? window.location.href = 'https://itunes.apple.com/us/app/jia-zhang-hui-xue-er-si-wang/id896405406?l=zh&ls=1&mt=8' :
+             (z('.speech').length == 0 ? (tpl = tpl.replace(/\$there\$/i, 'Safari'), main.append(tpl)) : tpl = tpl);
+           // return false;
+         } else {
+           window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+         }
+       }
+
+       function resizeFn(){
+        var w = z(window).width();
+          h = z(window).height();
+          main.css('height',h);
+          w > 640 ? z('.cloud').css('left',w/2-320) : z('.cloud').css('left',0);
+          h/2 < 220 ? btn.css('top',h/2-20) : 1===1;
+       }
+
+       z(window).on('resize',resizeFn)
+       btn.on('click',downLoad)
+
+     })(window.Zepto)
+     </script>
+  </body>               

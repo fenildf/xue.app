@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>家长会APP下载</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    
+    <link href="http://cdn.bootcss.com/datatables/1.9.4/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/datatables/1.9.4/css/jquery.dataTables_themeroller.min.css" rel="stylesheet">
+    <link href="/static/css/xesapp_down.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div class="content">
+        <!-- <h1>学而思网校</h1> -->
+    <div class="head">
+        学而思网校
+    </div>
+
+    <div class="download">
+        <div class="download-title">
+            <img src="/static/img/app_logo.png">
+            <ul>
+                <li>家长会</li>
+                <li><span>聊出孩子的未来</span></li>
+            </ul>
+        </div>   
+        
+            <a class="download-btn" id="down_link" href="###">免费高速下载</a>
+        
+    </div>
+
+    <div class="intro">
+        <div class="intro-title">应用简介</div>
+        <ul class="into-content">
+            <li>1、获得网校课程、活动、政策、命题趋势等最新资讯</li>
+            <li>2、接触尖端家长，学习先进教学方法与学习经验</li>
+            <li>3、与老师在线互动，感受老师的贴心服务</li>
+        </ul>
+    </div>
+
+    <div class="bottom">
+        Copyright © 2014 Xueersi.com  京ICP备09032638号
+    </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function is_weixn(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $(function(){
+            // alert(/ipad|iphone|mac/i.test(navigator.userAgent));
+            if(/ipad|iphone|mac/i.test(navigator.userAgent)){
+                // alert(1);
+                window.location.href = 'http://itunes.apple.com/us/app/jia-zhang-hui-liao-chu-hai/id831148884?l=zh&ls=1&mt=8';
+            }
+          $('#down_link').on('click', function(){
+            if (/android|Linux/i.test(navigator.userAgent)){
+                if(is_weixn()){
+                    $('body').append('<p class="speech">我很努力，但微信不让下载。<br />请点击<span class="text-danger">右上角</span>，选择“<span class="text-danger">在浏览器中打开</span>”就能下载了。</p>');
+                }else{
+                window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+            }
+            }else if (/ipad|iphone|mac/i.test(navigator.userAgent)){
+                // alert(2);
+                // alert('IOS版，即将推出，敬请期待！');
+                window.location.href = 'http://itunes.apple.com/us/app/jia-zhang-hui-liao-chu-hai/id831148884?l=zh&ls=1&mt=8';
+                // return false;
+            }else{
+                window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+            }
+
+        });
+        });
+    </script>
+  </body>
+  </html>

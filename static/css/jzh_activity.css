@@ -1,0 +1,600 @@
+html{
+	font-size:100%;
+	height:100%;
+}
+body{
+	padding:0;
+	color:#f0f2f5;
+}
+input,a{
+	outline:none;
+}
+.active_join{
+	position:relative;
+	width:100%;
+	padding:0.625rem 0.4375rem;
+	background:#f9f9f9;
+	color:#fff;
+	margin:0 auto 0.5em;
+	border-radius:5px;
+}
+.active_join .active_title{
+	font-size:1rem;
+	overflow:hidden;
+	margin-bottom:10px;
+	padding:0 0.3125rem;
+}
+#join_detail{
+	display:none;
+}
+.active_join img.active_pic{
+	display:block;
+	margin:0 auto;
+	border-radius:5px;
+	margin-bottom:0.625rem;
+}
+.active_join p.active_info{
+	width:100%;
+	font-size:0.9375rem;
+}
+ .last_time{
+	width:100%;
+	color:#fff;
+	font-size:0.9375rem;
+	margin:0.9375rem 0 1.25rem 0;
+	text-align:center;
+
+}
+.last_time .time{
+	display:inline-block;
+	padding:0 0.3rem 0 1.344rem;
+	margin-right:0.625rem;
+	background:rgba(0,0,0,0.3) url("../img/xesapp_activity_clock.png") no-repeat 4px 2px;
+	border-radius: 0.625rem;
+
+	
+}
+.people_number{
+	display:inline-block;
+}
+a.join_button{
+	cursor:pointer;
+}
+a.join_button:hover{
+	text-decoration: none;
+	color:#fff;
+}
+a.join_button{
+	text-decoration: none;
+	color:#fff;
+}
+.join_button{
+	display:block;
+	font-size:1rem;
+	color:#fff;
+	cursor:default;
+	text-decoration: none;
+	width:7.8rem;
+	height:2.2rem;
+	border-radius:1.1rem;
+	line-height: 2.2rem;
+	text-align: center;
+	margin:1.25rem auto;
+}
+.join_rightnow{
+	background:#fa5050;
+}
+.join_rightnow:active{
+	background: #c30505;
+}
+.join_nostart{
+	background:rgba(0,0,0,0.3);
+}
+.join_end{
+	background:rgba(0,0,0,0.3);
+}
+.join_full{
+	background:#2da5da;
+}
+.join_success{
+	background:#fa5050;
+}
+p.baoming_info{
+	width:100%;
+	height:auto;
+	padding:0 1.25rem;
+	overflow:hidden;
+	font-size:0.75rem;
+	text-align:center;
+	margin-bottom:0.5rem;
+}
+p.baoming_info span{
+	display:inline-block;
+}
+
+.active_form .form_info{
+	height:auto;
+	overflow:hidden;
+	width:96%;
+	max-width:15.75rem;
+	margin:0 auto 0.625rem;
+}
+.form_info .tips_info{
+	display:none;
+	height:1.05rem;
+	float:left;
+	font-size:0.75rem;
+	margin-top:0.25rem;
+	width:100%;
+	padding-left:0.75rem;
+}
+.tips_info span.icon{
+	display:inline-block;
+	height:1.05rem;
+	width:1.05rem;
+	background:#fa5050;
+	border-radius: 0.53rem;
+	font-size:1rem;
+	text-align:center;
+	margin-right:0.25rem;
+	line-height: 1rem;
+}
+.form_error label{
+	border-top:2px solid #fa5050 !important;
+	border-left:2px solid #fa5050 !important;
+	border-bottom:2px solid #fa5050 !important;
+}
+
+.form_error input{
+	border-top:2px solid #fa5050 !important;
+	border-right:2px solid #fa5050 !important;
+	border-bottom:2px solid #fa5050 !important;
+
+}
+.form_error .tips_info{
+	display:block;
+}
+.active_form input{
+	display:block;
+	float:left;
+	width:75%;
+	max-width:12rem;
+	height:2.75rem;
+	padding: 0.75rem 0;
+	outline: none;
+	color:#c9c9c9;
+	font-size:0.825rem;
+	border:0;
+	border-radius: 0 1.375rem 1.375rem 0;
+
+}
+.active_form .like_input{
+	display:block;
+	float:left;
+	width:75%;
+	max-width:12rem;
+	height:2.75rem;
+	line-height:2.75rem;
+	background:#E6E6FA;
+	color:#c9c9c9;
+	font-size:0.8625rem;
+	border:0;
+	cursor:default;
+	border-radius: 0 1.375rem 1.375rem 0;
+}
+.active_form label{
+	float:left;
+	display:block;
+	width:25%;
+	max-width:3.875rem;
+	height:2.75rem;
+	border:0;
+	color:#c9c9c9;
+	font-size:0.825rem;
+	font-weight: 100;
+	line-height:2.75rem;
+	text-align:center;
+	background:#fff;
+	border-radius: 1.375rem 0 0 1.375rem;
+}
+.active_form a.submit{
+	display:block;
+	font-size:1rem;
+	color:#fff;
+	width:8rem;
+	height:2.2rem;
+	border-radius:1.1rem;
+	background:#b5c80f;
+	line-height: 2.2rem;
+	text-align: center;
+	margin:0 auto;
+	text-decoration: none;
+}
+.active_form a.submit:active{
+	background:#93a115;
+}
+.active_form  p.pay_attention{
+	width:96%;
+	height:auto;
+	max-width:15.75rem;
+	margin:0 auto 0.625rem;
+	color:#fff;
+	padding:0 1.05rem;
+	font-size:0.75rem;
+}
+
+
+/* page2*/
+.question_title{
+	font-size:1.1rem;
+	overflow:hidden;
+	margin-bottom:0.3rem;
+	color:#666666;
+	padding:0 0.3125rem;
+}
+.question_pic{
+	margin-bottom:1.5rem;
+	padding:0 0.3125rem;
+}
+.question_pic img{
+	border-radius: 2.5px;
+}
+.active_join .question_button{
+	text-align:center;
+	margin:1.25rem auto 0.2rem;
+}
+.active_join .question_button input[type=button]{
+	display: inline-block;
+	margin-bottom: 0.35rem;
+	text-align: center;
+	color: #000;
+	margin-right: 3%;
+	border: 0px none;
+	font-size: 1rem;
+	background: none repeat scroll 0% 0% #f9f9f9;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 1.5rem; 
+	border:2px solid #dcdcdc;
+}
+.question_radio{
+	display:none;
+}
+.question_button .current{
+	background:#e77878 !important;
+	color:#fff !important;
+	border:2px solid #e77878 !important;
+	border-radius: 1.5rem !important; 
+}
+input#submit{
+ 	display:block;
+	width: 80%;
+	height:3rem;
+	font-size:1.5rem;
+	text-align: center;
+	border:0;
+	text-decoration: none;
+	line-height:3rem;
+	border-radius: 0.5rem;
+	background: #59A1CA;
+	color:#fff;
+	margin:1em auto 0;
+	
+	
+}
+input#submit:active{
+	background:#1b7095;
+}
+
+
+/*老师抢金币*/
+.teacher_quertion{
+	width:100%;
+	height:auto;
+	max-height:6.3rem;
+	position:relative;
+	overflow:hidden;
+	z-index:50;
+
+}
+.teacher_quertion .teacher_title{
+	position:absolute;
+	margin:0;
+	padding:0;
+	width:80%;
+	margin-top:0.5rem;
+	left:6%;
+	top:0;
+	z-index:90;
+}
+.teacher_quertion .teacher_title img{
+	float:left;
+	width:3.5rem;
+	height:3.5rem;
+	margin-top:0.5rem;
+}
+.teacher_quertion .teacher_title .teacher_info{
+	float:left;
+	margin:0.4rem 0 0 0.625rem;
+	width:70%;
+}
+.teacher_quertion .teacher_title .teacher_info .teacher_name{
+	font-size:1rem;
+	color:#fff;
+	
+}
+.teacher_quertion .teacher_title .teacher_info .teacher_time{
+	font-size:0.75rem;
+	color:black;
+	opacity: 0.5;
+}
+.teacher_quertion .teacher_title .teacher_info .gold_info{
+	width:8rem;
+	max-width:100%;
+	padding:0.25rem;
+	background:#e77878;
+	color:#fff;
+	text-align:center;
+	margin:0.5rem 0.5rem 0 0;
+	border-radius: 5px;
+}
+.teacher_quertion .teacher_money{
+	display:inline-block;
+	float:right;
+	width:20%;
+	text-align:center;
+}
+.teacher_quertion .teacher_money img{
+	display:block;
+	width:auto;
+	height:auto;
+	margin: 0 auto;
+	max-width:50px;
+	max-height:50px;
+}
+.teacher_quertion .teacher_money .money_number{
+	text-align:center;
+	color:#fcd837;
+	font-weight:700;
+	font-size:0.75rem;
+	margin-top:5px;
+	letter-spacing: 1px;
+}
+.teacher_quertion img.stock{
+	width:20%;
+	max-width:6rem;
+	position:absolute;
+	right:0;
+	top:0;
+	z-index: 100;
+}
+.join_number{
+	width:100%;
+	font-size:0.95rem;
+	padding:0.75rem 0.85rem;
+	height:2.8rem;
+	background:#5a93b4;
+	line-height:1.4rem;
+}
+.join_number .join_info{
+	float:left;
+	color:#fff;
+}
+.join_number .join_info .all_number,
+.join_number .join_info .my_money{
+	color:#ffff9d;
+	font-size:20px;
+}
+.join_number .money_status{
+	float:right;
+	color:#fcd837;
+}
+.billboard_content{
+	height:3.725rem;
+	border-bottom:1px solid rgba(255,255,255,0.3);
+	overflow:hidden;
+	
+	border-bottom:1px solid #dcdcdc;
+	
+}
+.billboard_content .rank_number{
+	display:inline-block;
+	height:2.5rem;
+	width:2.5rem;
+	font-size:1.55rem;
+	color:#a0a0a0;
+	opacity: 0.5;
+	position:absolute;
+	left:0rem;
+	top:0.15rem;
+	text-align: center;
+	border-right:2px solid #dcdcdc;
+
+}
+.billboard_left{
+	width:70%;
+	float:left;
+	margin:0.625rem 0;
+	position:relative;
+	font-size:0.9375rem;
+	color:#666;
+}
+.billboard_right{
+	width:19%;
+	float:right;
+}
+.billboard_left img{
+	width:2.5rem;
+	height:2.5rem;
+	margin-left:3rem;
+	float:left;
+	
+}
+.student_info{
+	float:left;
+	margin-left:1rem;
+	padding-top:0.2rem;
+	max-width:50%;
+}
+.student_name{
+	display: inline-block;
+	height:1.1rem;
+	width:100%;
+	overflow: hidden;
+}
+.billboard_right{
+	padding-right:0.3125rem;
+	float:right;
+	color:#fff;
+	font-size: 0.9375rem;
+	margin:0.9375rem 1rem 0.9375rem 0;
+	text-align:right;
+}
+.billboard_right .student_money_number{
+	color:#fa5050;
+	font-size:1.5rem;
+	font-weight:700;
+}
+.billboard_right .getmoney_time{
+	color:black;
+	opacity: 0.5;
+	font-size:0.625rem;
+}
+.billboard_left .date{
+	color:black;
+	opacity: 0.5;
+	font-size:0.625rem;
+}
+.active_join .answer_info{
+	width:100%;
+	color:#666;
+	font-weight:700;
+	text-align:center;
+	font-size:1.2rem;
+	margin:0;
+}
+.active_join .right_answer{
+	width:100%;
+	color:#666;
+	text-align:center;
+	font-size:0.9375rem;
+}
+.active_join .right_answer .right_option{
+	font-size:20px;
+	color:#99ccaa;
+}
+.active_join .check_rank{
+	display:block;
+	 width:80%;
+	 height:2.2rem;
+	 margin:0.625rem auto 1.125rem;
+	 color:#fff;
+	 text-decoration: none;
+	 line-height: 2.2rem;
+	font-size:0.85rem;
+	 text-align: center;
+	 border-radius:5px;
+	 background:#70b8e1;
+}
+.active_join .check_rank:active{
+	background: #3090c7;
+}
+.active_join .answer_ico{
+	text-align:center;
+	margin-top:1.5rem;
+}
+
+/*遮罩*/
+.pic_shade{
+	overflow:hidden;
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:black;
+	top:0;
+	left:0;
+	z-index:100;
+}
+.zoom_area{
+	position:absolute;
+	height:100%;
+	width:100%;
+}
+.pic_shade img{
+	vertical-align: middle;
+}
+a#close{
+	position:absolute;
+	bottom:2rem;
+	left:2rem;
+	z-index:100;
+}
+.img-mini{
+	width:100%;
+	border:1px solid #F0F2F5;
+}
+.pic_shade .info{
+	position:absolute;
+	width:100%;
+	height:20px;
+	background:#fff;
+	top:20px;
+	z-index:500;
+	line-height:20px;
+	color:black;
+}
+.pic_shade .info2{
+	position:absolute;
+	width:100%;
+	height:20px;
+	background:#fff;
+	top:45px;
+	z-index:500;
+	line-height:20px;
+	color:black;
+}
+.pic_shade .info3{
+	position:absolute;
+	width:100%;
+	height:20px;
+	background:#fff;
+	top:70px;
+	z-index:500;
+	line-height:20px;
+	color:black;
+}
+
+.down_bg{
+	position:relative;
+	width:100%;
+	height:5rem;
+	background:#fff;
+	margin:0 auto 0.5em;
+	border-radius:5px;
+}
+.border_bottom{
+	padding-bottom:1rem;
+	border-bottom:2px solid #dcdcdc;
+}
+
+.no_question{
+	margin:1.5rem auto;
+	color:#666666;
+	text-align:center
+}
+.no_question img{
+	width:50%;
+	max-width:12rem;
+	max-height:12rem;
+}
+.no_question div{
+	font-size:1.1875rem;
+	margin-top:1rem;
+	font-weight:700;
+}
+.gray{
+	background:#f0f2f5;
+}
+.white{
+	background: #fff;
+}

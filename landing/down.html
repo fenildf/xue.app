@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="名师课堂,网校,课外辅导,网络教育,远程教育" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>下载家长会</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+        html{ font-size:100%; }
+        body{background: #3498db;overflow-y:scroll;}
+      
+        .content {
+            position: absolute;
+            z-index: 1;
+            width: 100%; height: 100%;
+        }
+        .content .tips { margin-top: 1em; }
+        .content .button a {
+            display:block;
+            width:90%;
+            height:2em;
+            font-family:"黑体";
+            margin:1em auto 0;
+            text-align: center;
+            color:#fff;
+            font-size:1.5em;
+            border-radius: 10px;
+            line-height:2em;
+            text-decoration: none;
+        }
+        .content .button a.download{ background:#ff6138; }
+        .content .button a.go_con{ background:#499dd5; }
+        .title{
+            padding-left:1rem;
+            margin:1rem 0 2rem;
+            overflow:hidden;
+        }
+        .title img{
+            width:60%;
+            max-width:26rem;
+            float:left;
+        }
+        .font{
+            overflow:hidden;
+            display: block;
+            width:100%;
+        }
+        .font img{
+            display: block;
+            width:50%;
+            margin:0rem auto 0rem auto;
+            max-width:16rem;
+        }
+        .xueersi img{
+            display: block;
+            width:30%;
+            max-width:12rem;
+            margin:1rem auto;
+        }
+        .talk img{
+            display: block;
+            width:95%;
+            max-width:39rem;
+            margin:1rem auto ;
+        }
+        .tips img{
+            margin:0 auto;
+        }
+    </style>
+    <script src="http://res01.xesimg.com/jquery/jquery.min.js"></script>
+
+	<script type="text/javascript">var FD_NAME='xesapp';</script>
+    <script src="http://analysis.xueersi.com/stats/xes_stat.js?1406109655"></script>
+	
+</head>
+<body>
+
+    <div class="content">
+        <div class="title"><img src="img/parent_number.png" class="img-responsive" alt=""></div>
+        <div class="font"><img src="img/landing_logo.png" class="img-responsive" alt=""></div>
+        <div class="button">
+            <a id="down_link" xes_id="appdown" href="javascript:coid(0);" class="download">点击立即下载<img src="img/download_icon.png" style="width:1.5rem;height:1.5rem;vertical-align:sub" alt=""></a>
+        </div>
+        <div class="tips"><img src="img/landing_tips.png" class="img-responsive" alt=""></div>
+        <div class="talk"><img src="img/talk_info.png" alt=""></div>
+        <div class="xueersi"><img src="img/xueersi.png" alt=""></div>
+    </div>
+  
+
+	<script>
+        function is_weixn(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $(function(){
+            // alert(/ipad|iphone|mac/i.test(navigator.userAgent));
+            
+          $('#down_link').on('click', function(){
+            if (/android|Linux/i.test(navigator.userAgent)){
+                if(is_weixn()){
+                    $('body').append('<p class="speech">我很努力，但微信不让下载。<br />请点击<span class="text-danger">右上角</span>，选择“<span class="text-danger">在浏览器中打开</span>”就能下载了。</p>');
+                }else{
+                window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+            }
+            }else if (/ipad|iphone|mac/i.test(navigator.userAgent)){
+                // alert(2);
+                // alert('IOS版，即将推出，敬请期待！');
+                window.location.href = 'https://itunes.apple.com/us/app/jia-zhang-hui-xue-er-si-wang/id896405406?l=zh&ls=1&mt=8';
+                // return false;
+            }else{
+                window.location.href = 'http://jzh.xueersi.com/QrcodeJump/getJumpLink';
+            }
+
+        });
+        });
+    </script>
+</body>
+</html>

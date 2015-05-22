@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>家长会网页版（历史记录）</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link href="http://res01.xesimg.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://res01.xesimg.com/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://res01.xesimg.com/fancyBox/jquery.fancybox.css" rel="stylesheet">      
+		<link href="http://cdn.bootcss.com/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link  href="/static/css/xesapp.css" rel="stylesheet" >
+
+    </head>
+    <body>
+        <div id="skin_bg" class="skin_12"></div>
+		<div id="history_panel" class="panel panel-default">
+			<div class="panel-heading">
+				<div class="form-group form-inline pull-right">
+	                <div class='input-group date' id='datetimepicker2'>
+	                	<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	                    <input id="history_date" type='text' class="form-control" data-date-format="YYYY-MM-DD" />
+	                </div>
+	            </div>
+				<nav id="pagecount" class="pull-right">
+			      <ul class="pagination pagination-sm"></ul>
+			    </nav>
+				
+			  <p class="history_roomname">全国三年级群聊天记录</p>
+			</div>
+			<div class="panel-body">
+				<div class="message_history" style="height:auto"> Loading ...</div>   
+			</div>
+		</div>
+    </body>
+         <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="http://res01.xesimg.com/jquery/jquery.min.js"></script>
+        <script src="http://res01.xesimg.com/bootstrap/js/bootstrap.min.js"></script>
+        <script src="http://res01.xesimg.com/fancyBox/jquery.fancybox.pack.js"></script>
+        <script src="/static/js/moment.min.js"></script>
+        <script src="http://cdn.bootcss.com/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="/static/js/xesapp.base.js"></script>
+        <script src="/static/js/xesapp.param.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="/static/js/thrift.js"> </script>
+        <script type="text/javascript" charset="utf-8" src="/static/js/thrift-binary.js"> </script>
+        <script type="text/javascript" charset="utf-8" src="/static/js/message_types.js"> </script>
+        <script type="text/javascript" charset="utf-8" src="/static/js/messagepack.js"> </script>
+        
+
+        <script src="/static/js/xesapp.history.js"></script>
+        
+
+
+</html>
